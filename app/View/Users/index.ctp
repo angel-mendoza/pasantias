@@ -56,6 +56,9 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?></li>
+		<?php if($current_user['role']='admin'){ ?>
+		<li><?php echo $this->Html->link(__('New User administrador'), array('action' => 'agregarAdmin')); ?></li>
+		<?php } ?>
 		<li><?php echo $this->Html->link(__('List Empresas'), array('controller' => 'empresas', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Empresa'), array('controller' => 'empresas', 'action' => 'add')); ?> </li>
 	</ul>
